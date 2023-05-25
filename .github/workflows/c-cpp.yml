@@ -23,7 +23,7 @@ jobs:
           git config --global user.email "nitsua0615+github-actions@gmail.com"
           git config --global user.name "Nitsua0615-Actions"
           git commit -a -m "[GitHub Actions] Updated windows-latest binaries"
-          git push "https://Nitsua0615-Actions:${{ secrets.SECRET }}@github.com/Nitsua0615/uWebSockets.js" binaries
+          git push "https://nitsua0615-actions:${{ secrets.SECRET }}@github.com/Nitsua0615/uWebSockets.js" binaries
   build-unix:
     runs-on: ${{ matrix.os }}
     strategy:
@@ -47,7 +47,7 @@ jobs:
           git config --global user.email "nitsua0615+github-actions@gmail.com"
           git config --global user.name "Nitsua0615-Actions"
           git commit -a -m "[GitHub Actions] Updated ${{ matrix.os }} binaries" || true
-          git push "https://Nitsua0615-Actions:${{ secrets.SECRET }}@github.com/Nitsua0615/uWebSockets.js" binaries
+          git push "https://nitsua0615-actions:${{ secrets.SECRET }}@github.com/Nitsua0615/uWebSockets.js" binaries
 
   build-arm:
     runs-on: ubuntu-latest
@@ -89,4 +89,4 @@ jobs:
           git config --global user.name "Nitsua0615-Actions"
           git add *.node *.js
           git commit -a -m "[GitHub Actions] Updated linux-${{ matrix.arch }} binaries" || true
-          git push "https://Nitsua0615-Actions:${{ secrets.SECRET }}@github.com/Nitsua0615/uWebSockets.js" binaries
+          git push "https://nitsua0615-actions:${{ secrets.SECRET }}@github.com/Nitsua0615/uWebSockets.js" binaries
